@@ -232,9 +232,7 @@
 
   async function initialize() {
     try {
-      const response = await fetch('/api/network');
-      if (!response.ok) throw new Error('Network unavailable');
-      graph = await response.json();
+      graph = await api('/api/network');
       nodesById = new Map(graph.nodes.map(node => [node.id, node]));
       neighbors = new Map(graph.nodes.map(node => [node.id, new Set()]));
       graph.links.forEach(edge => {

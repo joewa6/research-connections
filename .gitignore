@@ -15,3 +15,5 @@ data/researcher_profiles.jsonl
 data/sample_profiles.json
 data_seed*/
 Start SQL Lab.command
+node_modules/
+dist/

@@ -7,6 +7,7 @@ const formatNumber = value => new Intl.NumberFormat().format(value);
 const state = {kind:'researchers', offset:0, request:null, results:null, profileToken:0, profileStack:[]};
 
 async function api(path, options = {}) {
+  if (window.researchData) return window.researchData.request(path, options);
   const response = await fetch(path, options);
   const body = await response.json();
   if (!response.ok) throw new Error(body.error || 'Something went wrong. Please try again.');
@@ -92,7 +93,7 @@ async function search(push = true) {
   updateControls();
   const params = searchParameters();
   if (push) {
-    const next = '/' + (params.size ? '?' + params : '');
+    const next = location.pathname + (params.size ? '?' + params : '');
     if (next !== location.pathname + location.search) history.pushState(null, '', next);
   }
   $('#search-error').hidden = true;
@@ -186,7 +187,9 @@ async function init() {
     readLocation();
     await search(false);
   } catch (error) {
-    $('#search-error').textContent = 'The directory is unavailable. Check that the local server is running, then reload.';
+    $('#search-error').textContent = window.researchData
+      ? 'The directory could not load. Check your connection and refresh the page.'
+      : 'The directory is unavailable. Check that the local server is running, then reload.';
     $('#search-error').hidden = false;
     $('#result-count').textContent = 'Connection unavailable';
     $('#results-panel').setAttribute('aria-busy', 'false');

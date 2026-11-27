@@ -56,6 +56,8 @@ The response includes one real matching excerpt per displayed result. With an AN
 
 The UI does not include the former SQL editor. SQL examples and the schema remain available as files for direct database exploration.
 
+The public GitHub Pages version bundles the same SQLite database and uses sql.js in a Web Worker. `playground/static/database.js` implements the same parameterized queries and response shapes as the local Python API. Regression fixtures compare complete responses, including result order, excerpt sources, profiles, suggested collaborators and the network. A browser adapter routes the UI's data requests into the worker; the local version continues to use HTTP API requests.
+
 ## Network
 
 `GET /api/network` returns every researcher as a node and every distinct pair of people sharing a project as a link. A self-join on `researcher_projects` finds these pairs, with the lower researcher ID first to avoid duplicates. Each link carries its number of shared projects. A node's degree counts distinct collaborators, not memberships or projects.

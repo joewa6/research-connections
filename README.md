@@ -1,5 +1,7 @@
 # Research Connections
 
+[**Open the website →**](https://joewa6.github.io/research-connections/)
+
 A searchable directory of fictional researchers and projects. Find people by their work, expertise, support needs or desired outcomes, then follow the projects that connect them.
 
 The interface uses a search bar. No SQL knowledge is needed.
@@ -21,7 +23,23 @@ Open **http://127.0.0.1:8765**. Stop the server with Ctrl+C.
 
 If you already have a suitable conda environment with Python 3.11 or later, use it instead; no packages need installing. On the original Mac, the existing `base` environment works. The optional [Mac launcher](Start%20Research%20Connections.command) opens the app in your browser and uses `base` unless `RESEARCH_CONDA_ENV` names another environment.
 
-The repository contains the app and dataset. GitHub does not run the Python server; this is a local application, not a hosted website.
+The public website runs the same SQLite database in your browser. The Python server is an optional local version for development and database experiments.
+
+## Publish the website
+
+GitHub Pages serves [joewa6.github.io/research-connections](https://joewa6.github.io/research-connections/). The workflow in `.github/workflows/pages.yml` builds, tests and publishes changes pushed to `main`.
+
+To build the hosted version locally with Node.js 22 or later:
+
+```bash
+npm ci --ignore-scripts
+npm run build
+npm test
+```
+
+Serve `dist/` with a local HTTP server to preview it. Opening `index.html` directly as a file will not work because the browser needs to fetch the database and start its worker.
+
+The build packages the existing HTML/CSS, a pinned copy of [sql.js](https://sql.js.org/), and the complete fictional SQLite database. It does not require a hosted Python service, API credentials, or an external runtime CDN. Searches run in a background worker so the network remains interactive. Visitors download about 7 MB of assets on their first visit, including the dataset; they cannot modify the shared data.
 
 ## Search
 
@@ -66,7 +84,9 @@ node --check playground/static/network.js
 conda run -n research-connections python scripts/validate_dataset.py data/sustech_synthetic.sqlite
 ```
 
-The application tests check search logic, phrases, linked projects, excerpts, filters, pagination, collaborator relationships, exact network connections and database write protection. Node is only used for the optional JavaScript syntax checks.
+The Python application tests check search logic, phrases, linked projects, excerpts, filters, pagination, collaborator relationships, exact network connections and database write protection. The 54 browser-database tests include 51 complete-response comparisons against the Python API, plus input errors, write protection and deployment asset paths. Node runs the website build and browser-database tests.
+
+After intentionally changing API results or regenerating the dataset, refresh the reference responses with `conda run -n research-connections python scripts/create_browser_fixtures.py`, then rerun both test suites.
 
 The server binds to `127.0.0.1`, opens SQLite in read-only mode, and accepts parameterized searches. There is no arbitrary-SQL web endpoint, external API, tracking or required frontend build. This server is intended for local use.
 
@@ -74,6 +94,9 @@ The server binds to `127.0.0.1`, opens SQLite in read-only mode, and accepts par
 | --- | --- |
 | `playground/server.py` | Python server, search and profile queries |
 | `playground/static/` | HTML, CSS and JavaScript |
+| `playground/static/database.js` | Browser SQLite search, profiles and network queries |
+| `scripts/build_web.mjs` | Build the GitHub Pages website in `dist/` |
+| `.github/workflows/pages.yml` | Automatic website tests and publication |
 | `playground/test_server.py` | Search and relationship tests |
 | `data/sustech_synthetic.sqlite` | Included relational database |
 | `schema.sql` | Tables, keys, indexes and views |

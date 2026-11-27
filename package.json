@@ -1,0 +1,12 @@
+{
+  "name": "research-connections",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build_web.mjs",
+    "test": "node --test playground/test_browser_database.cjs"
+  },
+  "devDependencies": {
+    "sql.js": "1.17.0"
+  }
+}
