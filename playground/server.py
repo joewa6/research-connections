@@ -246,6 +246,33 @@ def collaborators(identifier):
         connection.close()
 
 
+def network():
+    """One node per researcher; one edge per distinct co-project pair."""
+    connection = connect()
+    try:
+        nodes = rows(connection, '''SELECT r.researcher_id AS id, r.full_name AS name,
+            r.role, r.primary_area_id AS area_id, count(rp.project_id) AS project_count
+            FROM researchers r LEFT JOIN researcher_projects rp USING(researcher_id)
+            GROUP BY r.researcher_id ORDER BY r.researcher_id''')
+        edges = rows(connection, '''SELECT a.researcher_id AS source,
+            b.researcher_id AS target, count(*) AS shared_projects
+            FROM researcher_projects a JOIN researcher_projects b
+              ON a.project_id=b.project_id AND a.researcher_id<b.researcher_id
+            GROUP BY a.researcher_id, b.researcher_id
+            ORDER BY a.researcher_id, b.researcher_id''')
+        degrees = {node['id']: 0 for node in nodes}
+        for edge in edges:
+            degrees[edge['source']] += 1
+            degrees[edge['target']] += 1
+        for node in nodes:
+            node['degree'] = degrees[node['id']]
+        return {'nodes': nodes, 'links': edges,
+                'areas': rows(connection, 'SELECT area_id, name FROM research_areas ORDER BY area_id'),
+                'isolated_researchers': sum(value == 0 for value in degrees.values())}
+    finally:
+        connection.close()
+
+
 class Handler(BaseHTTPRequestHandler):
     server_version = 'ResearchConnections/2.0'
 
@@ -269,6 +296,8 @@ class Handler(BaseHTTPRequestHandler):
         try:
             if path == '/api/overview':
                 return self.respond(200, overview())
+            if path == '/api/network':
+                return self.respond(200, network())
             parts = path.strip('/').split('/')
             if len(parts) in (2, 3, 4) and parts[0] == 'api' and parts[1] in ('researchers', 'projects'):
                 if len(parts) == 2:
@@ -284,6 +313,7 @@ class Handler(BaseHTTPRequestHandler):
                 return self.respond(200 if result else 404, result or {'error': 'That record does not exist.'})
             files = {'/': ('index.html', 'text/html; charset=utf-8'),
                      '/app.js': ('app.js', 'text/javascript; charset=utf-8'),
+                     '/network.js': ('network.js', 'text/javascript; charset=utf-8'),
                      '/styles.css': ('styles.css', 'text/css; charset=utf-8'),
                      '/favicon.svg': ('favicon.svg', 'image/svg+xml')}
             if path in files:

@@ -4,6 +4,10 @@ A searchable directory of fictional researchers and projects. Find people by the
 
 The interface uses a search bar. No SQL knowledge is needed.
 
+The landing page opens with an interactive network of all 1,000 people and 2,237 shared-project connections. Click a person to open their profile, drag to explore, or use the zoom controls. The area legend highlights each research group; the person selector offers a keyboard alternative.
+
+Colours show primary research areas, and larger dots indicate more collaborators. The network always shows the full dataset, independent of search filters. Positions group people by area; distances are not a measure of similarity.
+
 ## Run locally
 
 The database is included. Python's standard library is the only runtime dependency.
@@ -58,10 +62,11 @@ The database retains its original filename, `data/sustech_synthetic.sqlite`. See
 ```bash
 conda run -n research-connections python -m unittest discover -s playground -v
 node --check playground/static/app.js
+node --check playground/static/network.js
 conda run -n research-connections python scripts/validate_dataset.py data/sustech_synthetic.sqlite
 ```
 
-The application tests check search logic, phrases, linked projects, excerpts, filters, pagination, collaborator relationships and database write protection. Node is only used for the optional JavaScript syntax check.
+The application tests check search logic, phrases, linked projects, excerpts, filters, pagination, collaborator relationships, exact network connections and database write protection. Node is only used for the optional JavaScript syntax checks.
 
 The server binds to `127.0.0.1`, opens SQLite in read-only mode, and accepts parameterized searches. There is no arbitrary-SQL web endpoint, external API, tracking or required frontend build. This server is intended for local use.
 

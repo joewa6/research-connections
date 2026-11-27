@@ -153,6 +153,7 @@ async function openProfile(kind, id, addToHistory = true) {
 }
 
 function bindEvents() {
+  document.addEventListener('research-person-open', event => openProfile('researchers', event.detail.researcherId));
   $('#search-form').addEventListener('submit', event => { event.preventDefault(); state.offset = 0; search(); });
   document.addEventListener('click', event => {
     const button = event.target.closest('button');

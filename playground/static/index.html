@@ -6,17 +6,25 @@
   <title>Research Connections</title>
   <meta name="description" content="Search a fictional research community by topic, expertise, support needs and desired outcomes.">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/styles.css">
-  <script src="/app.js" defer></script>
+  <link rel="stylesheet" href="/styles.css?v=network-1">
+  <script src="/app.js?v=network-1" defer></script>
+  <script src="/network.js?v=network-1" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to search</a>
+  <a class="skip-link" href="#search-input">Skip to search</a>
   <header class="site-header">
     <a class="wordmark" href="/" aria-label="Research Connections home"><svg width="23" height="23" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M6 18L18 6" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="6" cy="6" r="3" fill="currentColor"/><circle cx="18" cy="6" r="3" fill="currentColor"/><circle cx="6" cy="18" r="3" fill="currentColor"/><circle cx="18" cy="18" r="3" fill="currentColor"/></svg>Research Connections</a>
     <div class="header-links"><span class="demo-label">Demo dataset</span><button id="about-button" class="quiet-button">About the data</button></div>
   </header>
   <main id="main">
-    <div class="intro"><h1>Find people and projects</h1><p id="dataset-size">Search research, expertise and support needs.</p></div>
+    <section class="network-section" aria-labelledby="network-title">
+      <div class="network-heading"><div><h1 id="network-title">Research network</h1><p id="network-count">1,000 researchers, connected through shared projects.</p></div><a class="network-search-link" href="#search-form">Search the directory ↓</a></div>
+      <div class="network-stage"><canvas id="network-canvas" role="img" aria-label="Network of 1,000 fictional researchers. Lines connect people who share a project. Use the person selector below as a text alternative."></canvas><p id="network-loading" class="network-loading" role="status">Drawing the network…</p><div class="network-tools" aria-label="Network zoom"><button id="network-zoom-out" aria-label="Zoom out">−</button><button id="network-reset" aria-label="Reset network view">Reset</button><button id="network-zoom-in" aria-label="Zoom in">+</button></div><p class="network-instruction">Drag to move · Click a person to open their profile</p></div>
+      <div class="network-legend" id="network-legend" aria-label="Highlight a research area"></div>
+      <div class="network-bottom"><p id="network-selection" aria-live="polite">Each dot is a person. Larger dots have more collaborators.</p><div class="network-person-control"><label class="sr-only" for="network-person">Select a person in the network</label><select id="network-person"><option value="">Find a person in the network…</option></select><button id="network-open-person" class="quiet-button" disabled>Open profile</button></div></div>
+      <p class="network-note">Full dataset, grouped by primary research area. Links show existing shared projects, not suggested collaborations.</p>
+    </section>
+    <div class="intro"><h2>Find people and projects</h2><p id="dataset-size">Search research, expertise and support needs.</p></div>
     <form id="search-form" role="search">
       <label class="sr-only" for="search-input">Search people and projects</label>
       <div class="search-box"><svg width="21" height="21" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.7"/></svg><input id="search-input" type="search" maxlength="200" placeholder="Search names, topics, skills or needs" autocomplete="off"><button type="submit" id="search-submit" class="solid-button">Search</button></div>

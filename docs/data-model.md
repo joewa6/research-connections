@@ -55,3 +55,9 @@ Each OR group requires all its terms somewhere in that record's searchable docum
 The response includes one real matching excerpt per displayed result. With an AND query, the excerpt may show only one term when the other terms occur in different fields. Pages contain at most 15 records.
 
 The UI does not include the former SQL editor. SQL examples and the schema remain available as files for direct database exploration.
+
+## Network
+
+`GET /api/network` returns every researcher as a node and every distinct pair of people sharing a project as a link. A self-join on `researcher_projects` finds these pairs, with the lower researcher ID first to avoid duplicates. Each link carries its number of shared projects. A node's degree counts distinct collaborators, not memberships or projects.
+
+The default dataset has 1,000 nodes and 2,237 links. Researchers without a collaborator remain visible. Canvas draws a deterministic layout grouped by primary area, with higher-degree nodes nearer each group's centre. Positions and distances do not imply similarity or relationship strength. These are existing project relationships in the fictional data; expertise-based suggestions are separate and appear in profiles.

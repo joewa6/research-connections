@@ -152,6 +152,21 @@ class SearchTests(unittest.TestCase):
     def test_counts(self):
         self.assertEqual(server.overview()['counts'], {'researchers':1000,'projects':1500,'researcher_projects':3000})
 
+    def test_network_has_exact_shared_project_relationships(self):
+        graph = server.network()
+        self.assertEqual(len(graph['nodes']), 1000)
+        self.assertEqual(len(graph['links']), 2237)
+        self.assertEqual(len({node['id'] for node in graph['nodes']}), 1000)
+        self.assertEqual(sum(node['degree'] for node in graph['nodes']), 2 * len(graph['links']))
+        connection = server.connect()
+        memberships = {}
+        for person, project in connection.execute('SELECT researcher_id,project_id FROM researcher_projects'):
+            memberships.setdefault(person, set()).add(project)
+        connection.close()
+        expected = {(a,b):len(memberships[a] & memberships[b]) for a in memberships for b in memberships if a < b and memberships[a] & memberships[b]}
+        actual = {(edge['source'],edge['target']):edge['shared_projects'] for edge in graph['links']}
+        self.assertEqual(actual, expected)
+
 
 if __name__ == '__main__':
     unittest.main()
