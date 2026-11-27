@@ -4,6 +4,7 @@ const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const formatNumber = value => new Intl.NumberFormat().format(value);
+const areaClass = name => `area-${['Sustainable Energy','Materials Circularity','Green Robotics','Water for Life'].indexOf(name) + 1}`;
 const state = {kind:'researchers', offset:0, request:null, results:null, profileToken:0, profileStack:[]};
 
 async function api(path, options = {}) {
@@ -75,8 +76,10 @@ function renderResults(result) {
       const projectLink = people && ['project','project_needs','project_outcomes','needs','outcomes'].includes(field);
       source = `<p class="result-source">Matched in ${esc(labels[field] || field)}${projectLink ? `<span>·</span><button data-project="${item.match.source_id}">View related project</button>` : ''}</p>`;
     }
-    return `<article class="result-row"><div><h2><button class="record-name" data-${people ? 'person' : 'project'}="${id}">${esc(title)}</button></h2><p class="result-meta">${esc(meta)}</p><p class="result-excerpt">${excerpt(text, result.terms)}</p>${source}</div><div class="row-side">${people ? `<span class="role">${esc(item.role)}</span><span>${item.project_count} ${item.project_count === 1 ? 'project' : 'projects'}</span>` : `<span>${item.researcher_count} ${item.researcher_count === 1 ? 'person' : 'people'}</span>`}<button data-${people ? 'person' : 'project'}="${id}">View ${people ? 'profile' : 'project'} ↗</button></div></article>`;
+    const initials = people ? title.split(/\s+/).map(word => word[0]).slice(0,2).join('') : 'P';
+    return `<article class="result-row ${areaClass(item.research_area)}"><span class="record-avatar" aria-hidden="true">${esc(initials)}</span><div class="result-main"><div class="result-heading"><h2><button class="record-name" data-${people ? 'person' : 'project'}="${id}">${esc(title)}</button></h2>${people ? `<span class="role">${esc(item.role)}</span>` : ''}</div><p class="result-meta">${esc(meta)}</p><p class="result-excerpt">${excerpt(text, result.terms)}</p>${source}<div class="row-side">${people ? `<span>${item.project_count} ${item.project_count === 1 ? 'project' : 'projects'}</span>` : `<span>${item.researcher_count} ${item.researcher_count === 1 ? 'person' : 'people'}</span>`}<button data-${people ? 'person' : 'project'}="${id}">View ${people ? 'profile' : 'project'} ↗</button></div></div></article>`;
   }).join('');
+  $('#results-panel').scrollTop = 0;
   $('#empty-results').hidden = result.total !== 0;
   const noun = people ? (result.total === 1 ? 'person' : 'people') : (result.total === 1 ? 'project' : 'projects');
   $('#result-count').textContent = `${formatNumber(result.total)} ${noun}${result.query ? ' found' : ''}`;
@@ -133,7 +136,7 @@ async function openProfile(kind, id, addToHistory = true) {
     const item = await api(`/api/${kind}/${id}`);
     if (token !== state.profileToken) return;
     const person = kind === 'researchers';
-    const header = `<div class="profile-heading"><span class="record-code">${esc(person ? item.researcher_code : item.project_code)} · Fictional record</span><h2 id="profile-title">${esc(person ? item.full_name : item.title)}</h2><p class="meta">${esc(person ? item.role : item.stage)} · ${esc(person ? item.primary_area : item.research_area)}</p><p class="profile-summary">${esc(item.summary)}</p></div>`;
+    const header = `<div class="profile-heading ${areaClass(person ? item.primary_area : item.research_area)}"><span class="record-code">${esc(person ? item.researcher_code : item.project_code)} · Fictional record</span><h2 id="profile-title">${esc(person ? item.full_name : item.title)}</h2><p class="meta">${esc(person ? item.role : item.stage)} · ${esc(person ? item.primary_area : item.research_area)}</p><p class="profile-summary">${esc(item.summary)}</p></div>`;
     const offers = person ? `<section class="profile-section"><h3>Expertise</h3><ul class="expertise-list">${item.capabilities.map(cap => `<li title="${esc(cap.offer_description)}">${esc(cap.name)}</li>`).join('')}</ul></section>` : '';
     const connected = person ? `<section class="profile-section"><h3>Projects (${item.projects.length})</h3>${item.projects.map(project => `<div class="profile-item"><button class="profile-link" data-project="${project.project_id}">${esc(project.title)}</button><p>${esc(project.contribution)}</p></div>`).join('')}</section>` : `<section class="profile-section"><h3>People (${item.researchers.length})</h3>${item.researchers.map(researcher => `<div class="profile-item"><button class="profile-link" data-person="${researcher.researcher_id}">${esc(researcher.full_name)}</button><div class="item-meta">${esc(researcher.role)}</div><p>${esc(researcher.contribution)}</p></div>`).join('')}</section>`;
     const needs = `<section class="profile-section"><h3>Support needs</h3>${item.needs.map(need => `<div class="profile-item"><div class="item-meta">${esc(need.category)} · ${esc(need.priority)} priority</div><p>${esc(need.description)}</p></div>`).join('')}</section>`;
@@ -168,8 +171,8 @@ function bindEvents() {
   ['area-filter','role-filter','scope-filter'].forEach(id => $('#' + id).addEventListener('change', () => { state.offset = 0; search(); }));
   $('#clear-filters').addEventListener('click', () => { resetFilters(); state.offset = 0; search(); });
   $('#clear-search').addEventListener('click', () => { resetFilters(); $('#search-input').value = ''; state.offset = 0; search(); });
-  $('#previous-page').addEventListener('click', () => { state.offset = Math.max(0,state.offset - state.results.page_size); search(); $('.result-tabs').scrollIntoView({block:'start'}); });
-  $('#next-page').addEventListener('click', () => { state.offset += state.results.page_size; search(); $('.result-tabs').scrollIntoView({block:'start'}); });
+  $('#previous-page').addEventListener('click', () => { state.offset = Math.max(0,state.offset - state.results.page_size); search(); });
+  $('#next-page').addEventListener('click', () => { state.offset += state.results.page_size; search(); });
   window.addEventListener('popstate', () => { readLocation(); search(false); });
   $('#about-button').addEventListener('click', () => $('#about-dialog').showModal());
   $('#close-about').addEventListener('click', () => $('#about-dialog').close());

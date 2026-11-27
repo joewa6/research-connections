@@ -6,7 +6,9 @@ A searchable directory of fictional researchers and projects. Find people by the
 
 The interface uses a search bar. No SQL knowledge is needed.
 
-The landing page opens with an interactive network of all 1,000 people and 2,237 shared-project connections. Click a person to open their profile, drag to explore, or use the zoom controls. The area legend highlights each research group; the person selector offers a keyboard alternative.
+The dark workspace puts an interactive network beside the searchable directory, with a stacked layout on smaller screens. The network shows all 1,000 people and 2,237 shared-project connections. Click a person to open their profile, drag to explore, or use the zoom controls. The area legend highlights each research group; the person selector offers a keyboard alternative.
+
+Use **Cross-area links only** to show existing shared-project connections between people with different primary research areas. This does not infer new collaborations. Reset restores all links and clears the network selection.
 
 Colours show primary research areas, and larger dots indicate more collaborators. The network always shows the full dataset, independent of search filters. Positions group people by area; distances are not a measure of similarity.
 
