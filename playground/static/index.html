@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research Connections</title>
+  <meta name="description" content="Search a fictional research community by topic, expertise, support needs and desired outcomes.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to search</a>
+  <header class="site-header">
+    <a class="wordmark" href="/" aria-label="Research Connections home"><svg width="23" height="23" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M6 18L18 6" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="6" cy="6" r="3" fill="currentColor"/><circle cx="18" cy="6" r="3" fill="currentColor"/><circle cx="6" cy="18" r="3" fill="currentColor"/><circle cx="18" cy="18" r="3" fill="currentColor"/></svg>Research Connections</a>
+    <div class="header-links"><span class="demo-label">Demo dataset</span><button id="about-button" class="quiet-button">About the data</button></div>
+  </header>
+  <main id="main">
+    <div class="intro"><h1>Find people and projects</h1><p id="dataset-size">Search research, expertise and support needs.</p></div>
+    <form id="search-form" role="search">
+      <label class="sr-only" for="search-input">Search people and projects</label>
+      <div class="search-box"><svg width="21" height="21" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.7"/></svg><input id="search-input" type="search" maxlength="200" placeholder="Search names, topics, skills or needs" autocomplete="off"><button type="submit" id="search-submit" class="solid-button">Search</button></div>
+    </form>
+    <div class="search-help"><div class="examples">Try <button data-example="carbon">carbon</button>, <button data-example="&quot;carbon dioxide&quot;">"carbon dioxide"</button> or <button data-example="cellulose OR biocomposites">cellulose OR biocomposites</button></div><details><summary>Search tips</summary><div class="help-popover"><p><strong>Words:</strong> <code>carbon capture</code> finds records containing both words.</p><p><strong>Phrases:</strong> <code>"carbon dioxide"</code> keeps the words together.</p><p><strong>Either term:</strong> <code>cellulose OR biocomposites</code> finds either one.</p><p>Search looks at names, descriptions, expertise, needs and outcomes. People also match through their linked projects. Matches are literal text, not synonyms.</p></div></details></div>
+    <div class="filters">
+      <label>Research area<select id="area-filter"><option value="">All areas</option></select></label>
+      <label id="role-label">Role<select id="role-filter"><option value="">All roles</option><option>PI</option><option>Post-doc</option><option>PhD</option></select></label>
+      <label>Search in<select id="scope-filter"><option value="all">All fields</option><option value="research">Research descriptions</option><option value="expertise">Expertise</option><option value="needs">Support needs</option><option value="outcomes">Desired outcomes</option></select></label>
+      <button id="clear-filters" class="quiet-button" hidden>Clear filters</button>
+    </div>
+    <div class="result-tabs"><div role="tablist" aria-label="Search category"><button id="people-tab" role="tab" aria-selected="true" aria-controls="results-panel" data-kind="researchers">People</button><button id="projects-tab" role="tab" aria-selected="false" aria-controls="results-panel" data-kind="projects">Projects</button></div><span id="result-count" role="status">Loading…</span></div>
+    <section id="results-panel" role="tabpanel" aria-labelledby="people-tab" aria-busy="true">
+      <div id="search-error" class="error-message" role="alert" hidden></div>
+      <div id="results"></div>
+      <div id="empty-results" class="empty-results" hidden><h2>No matches</h2><p>Try a different word, use OR to broaden the search, or clear a filter.</p><button id="clear-search" class="outline-button">Show all records</button></div>
+    </section>
+    <nav class="pagination" aria-label="Results pages" hidden><button id="previous-page" class="outline-button">Previous</button><span id="page-info"></span><button id="next-page" class="outline-button">Next</button></nav>
+    <footer><span>All people, projects and outcomes are fictional.</span><a id="source-link" href="https://github.com/joewa6/research-connections" target="_blank" rel="noreferrer">Source on GitHub ↗</a></footer>
+  </main>
+  <dialog id="profile-dialog" aria-labelledby="profile-title"><div class="dialog-toolbar"><button id="profile-back" class="quiet-button" hidden>← Back</button><button id="close-profile" class="close-button" aria-label="Close profile">×</button></div><div id="profile-content"></div></dialog>
+  <dialog id="about-dialog" aria-labelledby="about-title"><div class="dialog-toolbar"><button id="close-about" class="close-button" aria-label="Close about the data">×</button></div><div class="about-content"><h2 id="about-title">About this dataset</h2><p>This is a working prototype with 1,000 fictional researchers, 1,500 projects and 3,000 researcher–project links. Each person has 1–5 projects.</p><p>Profiles include their research, expertise, support needs and desired outcomes. Shared projects connect people across four sustainability research areas.</p><p>The themes are inspired by <a href="https://sustech.iit.it/research" target="_blank" rel="noreferrer">IIT's SUSTech programme</a>. This independent prototype is not affiliated with IIT and does not describe its researchers or projects.</p><p>Search uses literal text. Collaborator suggestions match expertise tags; they do not assess availability or scientific suitability.</p><p class="muted">Built with SQLite and Python. The dataset stays read-only.</p></div></dialog>
+</body>
+</html>

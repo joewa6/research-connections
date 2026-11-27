@@ -1,0 +1,6 @@
+name: research-connections
+channels:
+  - defaults
+dependencies:
+  - python=3.13
+# Standard library only. No pip packages are required.

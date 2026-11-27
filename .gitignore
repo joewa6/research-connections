@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+data/.sustech-build-*/
+*.sqlite-wal
+*.sqlite-shm
+*.log
+.env
+.env.*
+!.env.example
+.aws/
+.codex/
+.agents/
+data/researcher_profiles.jsonl
+data/sample_profiles.json
+data_seed*/
+Start SQL Lab.command

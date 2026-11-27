@@ -1,0 +1,90 @@
+{
+  "passed": true,
+  "checks": {
+    "sqlite_integrity": true,
+    "foreign_keys": true,
+    "exactly_1000_researchers": true,
+    "exactly_1500_projects": true,
+    "exactly_3000_memberships": true,
+    "four_areas_and_32_topics": true,
+    "one_to_five_distinct_projects_per_person": true,
+    "role_distribution": true,
+    "all_people_and_projects_marked_synthetic": true,
+    "every_project_has_1_to_8_members": true,
+    "every_topic_has_projects": true,
+    "every_person_has_project_in_primary_area": true,
+    "expertise_gaps_not_already_offered_by_same_person": true,
+    "researcher_needs_complete": true,
+    "researcher_outcomes_complete": true,
+    "researcher_capabilities_complete": true,
+    "project_needs_complete": true,
+    "project_outcomes_complete": true,
+    "researchers_summary_nonempty": true,
+    "projects_summary_nonempty": true,
+    "researcher_needs_description_nonempty": true,
+    "researcher_outcomes_description_nonempty": true,
+    "project_needs_description_nonempty": true,
+    "project_outcomes_description_nonempty": true,
+    "researcher_projects_contribution_nonempty": true,
+    "balanced_areas": true,
+    "overview_views_complete": true,
+    "cross_area_matching_examples_exist": true,
+    "all_1000_profiles_exported_exactly_once": true,
+    "nested_export_matches_database": true,
+    "sample_covers_every_role_and_area": true
+  },
+  "table_counts": {
+    "capabilities": 53,
+    "metadata": 11,
+    "project_needs": 5771,
+    "project_outcomes": 3000,
+    "projects": 1500,
+    "research_areas": 4,
+    "researcher_capabilities": 4559,
+    "researcher_needs": 2870,
+    "researcher_outcomes": 2456,
+    "researcher_projects": 3000,
+    "researchers": 1000,
+    "topics": 32
+  },
+  "role_distribution": {
+    "PI": 150,
+    "PhD": 500,
+    "Post-doc": 350
+  },
+  "projects_per_researcher_distribution": {
+    "1": 200,
+    "2": 200,
+    "3": 200,
+    "4": 200,
+    "5": 200
+  },
+  "areas": [
+    {
+      "name": "Sustainable Energy",
+      "researchers": 250,
+      "projects": 375
+    },
+    {
+      "name": "Materials Circularity",
+      "researchers": 250,
+      "projects": 375
+    },
+    {
+      "name": "Green Robotics",
+      "researchers": 250,
+      "projects": 375
+    },
+    {
+      "name": "Water for Life",
+      "researchers": 250,
+      "projects": 375
+    }
+  ],
+  "shared_projects": 937,
+  "researchers_with_cross_area_projects": 251,
+  "projects_with_cross_area_teams": 263,
+  "exported_researcher_profiles": 1000,
+  "export_errors": [],
+  "notice": "Checks confirm structural consistency, not scientific feasibility or representativeness. Every record is fictional."
+}

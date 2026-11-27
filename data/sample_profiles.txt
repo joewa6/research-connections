@@ -1,0 +1,397 @@
+SYNTHETIC SUSTECH RESEARCHER PROFILES
+12 examples: one PI, post-doc and PhD researcher from each area.
+All people, projects and statements are fictional. Numerical outcomes are future targets.
+
+================================================================================
+SYN-R0001 | Esra DeSantis | PhD
+Primary area: Sustainable Energy
+
+A doctoral researcher working on carbon dioxide capture and green hydrogen. Their current work examines sorbent regeneration in biogas upgrading, with an emphasis on reproducible comparisons and practical resource use.
+
+CAN OFFER
+- Electrochemistry (proficiency 3/5)
+- Field experimentation (proficiency 4/5)
+- Process modelling (proficiency 3/5)
+- Statistical experimental design (proficiency 4/5)
+- Surface characterization (proficiency 4/5)
+
+PROJECTS
+- SYN-P0036: Carbon dioxide capture: amine-functionalized fibres for biogas upgrading (sorbent regeneration)
+  Area: Sustainable Energy | Stage: Lab study
+  Summary: This fictional study will investigate amine-functionalized fibres to capture carbon dioxide with regenerable sorbents for biogas upgrading. It will compare a candidate design with a predefined internal control while varying conditions associated with sorbent regeneration. The work will record performance, resource use and failure modes before deciding whether further development is justified.
+  Personal contribution: Build a reproducible analysis of performance and failure modes for biogas upgrading.
+- SYN-P0337: Green hydrogen: nickel-iron catalysts for coastal microgrids (electrode ageing)
+  Area: Sustainable Energy | Stage: Prototype
+  Summary: This fictional study will investigate nickel-iron catalysts to produce hydrogen using renewable electricity for coastal microgrids. It will compare a candidate design with a predefined internal control while varying conditions associated with electrode ageing. The work will record performance, resource use and failure modes before deciding whether further development is justified.
+  Personal contribution: Run controlled experiments on electrode ageing and curate the measurement records.
+
+LACKING OR COULD BENEFIT FROM
+- [Medium; Expertise; SYN-P0036] I could benefit from specialist input in gas analysis before deciding which design to develop for biogas upgrading.
+- [Medium; Expertise; SYN-P0337] I lack hands-on depth in life-cycle assessment and would benefit from a collaborator to help interpret electrode ageing.
+- [Medium; Training; SYN-P0337] I would benefit from focused training in uncertainty estimation and reproducible reporting for the nickel-iron catalysts study.
+
+DESIRED OUTCOMES
+- [Research; 12 months; SYN-P0337] I want to demonstrate an 18% reduction in electricity use per kilogram of hydrogen relative to the study's predefined internal control.
+- [Development; 24 months; SYN-P0337] I want to gain independence in experimental design and produce a reusable analysis notebook for this study.
+- [Impact; 18 months; SYN-P0337] I want to document the resource-use trade-offs and practical limitations of nickel-iron catalysts for coastal microgrids.
+
+================================================================================
+SYN-R0003 | Dario Garcia | PI
+Primary area: Sustainable Energy
+
+A principal investigator working on low-impact photovoltaics and waste-heat recovery. Their current work examines humidity exposure in shaded urban surfaces, with an emphasis on reproducible comparisons and practical resource use. Their projects also connect to green robotics.
+
+CAN OFFER
+- Gas analysis (proficiency 4/5)
+- Life-cycle assessment (proficiency 5/5)
+- Process modelling (proficiency 3/5)
+- Scale-up engineering (proficiency 4/5)
+- Surface characterization (proficiency 4/5)
+- Thermal modelling (proficiency 4/5)
+
+PROJECTS
+- SYN-P0018: Low-impact photovoltaics: lead-free absorbers for shaded urban surfaces (humidity exposure)
+  Area: Sustainable Energy | Stage: Prototype
+  Summary: This fictional study will investigate lead-free absorbers to improve the durability of low-impact solar devices for shaded urban surfaces. It will compare a candidate design with a predefined internal control while varying conditions associated with humidity exposure. The work will record performance, resource use and failure modes before deciding whether further development is justified.
+  Personal contribution: Guide the comparison protocol and assess the route to use in shaded urban surfaces.
+- SYN-P0136: Waste-heat recovery: flexible thermoelectric films for battery cooling loops (thermal contact losses)
+  Area: Sustainable Energy | Stage: Lab study
+  Summary: This fictional study will investigate flexible thermoelectric films to recover useful energy from low-temperature waste heat for battery cooling loops. It will compare a candidate design with a predefined internal control while varying conditions associated with thermal contact losses. The work will record performance, resource use and failure modes before deciding whether further development is justified.
+  Personal contribution: Define the scientific questions and connect the work to complementary projects.
+- SYN-P0196: Carbon dioxide capture: amine-functionalized fibres for ventilated indoor spaces (humidity interference)
+  Area: Sustainable Energy | Stage: Pilot
+  Summary: This fictional study will investigate amine-functionalized fibres to capture carbon dioxide with regenerable sorbents for ventilated indoor spaces. It will compare a candidate design with a predefined internal control while varying conditions associated with humidity interference. The work will record performance, resource use and failure modes before deciding whether further development is justified.
+  Personal contribution: Define the scientific questions and connect the work to complementary projects.
+- SYN-P0210: Low-impact photovoltaics: bio-based encapsulation for building facades (humidity exposure)
+  Area: Sustainable Energy | Stage: Lab study
+  Summary: This fictional study will investigate bio-based encapsulation to improve the durability of low-impact solar devices for building facades. It will compare a candidate design with a predefined internal control while varying conditions associated with humidity exposure. The work will record performance, resource use and failure modes before deciding whether further development is justified.
+  Personal contribution: Guide the comparison protocol and assess the route to use in building facades.
+- SYN-P0910: Cooperative environmental robots: distributed coverage planning for crop trial plots (communication gaps)
+  Area: Green Robotics | Stage: Prototype
+  Summary: This fictional study will investigate distributed coverage planning to coordinate small robots to map environments efficiently for crop trial plots. It will compare a candidate design with a predefined internal control while varying conditions associated with communication gaps. The work will record performance, resource use and failure modes before deciding whether further development is justified.
+  Personal contribution: Define the scientific questions and connect the work to complementary projects.
+
+LACKING OR COULD BENEFIT FROM
+- [Medium; Expertise; SYN-P0136] I need complementary expertise in data science to make the comparison protocol more convincing for battery cooling loops.
+- [High; Expertise; SYN-P0196] I could benefit from specialist input in adsorption science before deciding which design to develop for ventilated indoor spaces.
+- [High; Training; SYN-P0018] I would benefit from focused training in uncertainty estimation and reproducible reporting for the lead-free absorbers study.
+
+DESIRED OUTCOMES
+- [Research; 12 months; SYN-P0910] I want to demonstrate an 18% reduction in fleet energy use per mapped hectare relative to the study's predefined internal control.
+- [Development; 18 months; SYN-P0910] I want to assemble a complementary team and write a follow-on research proposal grounded in the validation results.
+
+================================================================================
+SYN-R0006 | Jonas Fernandes | Post-doc
+Primary area: Sustainable Energy
+
+A postdoctoral researcher working on circular energy storage. Their current work examines electrode swelling in shared mobility depots, with an emphasis on reproducible comparisons and practical resource use.
+
+CAN OFFER
+- Battery diagnostics (proficiency 4/5)
+- Data science (proficiency 4/5)
+- Life-cycle assessment (proficiency 5/5)
+- Statistical experimental design (proficiency 4/5)
+
+PROJECTS
+- SYN-P0179: Circular energy storage: bio-derived carbon anodes for shared mobility depots (electrode swelling)
+  Area: Sustainable Energy | Stage: Lab study
+  Summary: This fictional study will investigate bio-derived carbon anodes to extend the useful life of batteries made with abundant materials for shared mobility depots. It will compare a candidate design with a predefined internal control while varying conditions associated with electrode swelling. The work will record performance, resource use and failure modes before deciding whether further development is justified.
+  Personal contribution: Coordinate repeat experiments and quantify uncertainty in the performance measurements.
+
+LACKING OR COULD BENEFIT FROM
+- [Medium; Expertise; SYN-P0179] I could benefit from specialist input in techno-economic analysis before deciding which design to develop for shared mobility depots.
+- [High; Funding; SYN-P0179] I need a modest consumables and validation budget to compare alternatives for electrode swelling.
+- [Medium; Partner; SYN-P0179] I would benefit from an application partner working with shared mobility depots who can explain deployment constraints.
+
+DESIRED OUTCOMES
+- [Research; 18 months; SYN-P0179] I want to demonstrate a 25% reduction in capacity loss over a fixed cycling protocol relative to the study's predefined internal control.
+- [Development; 24 months; SYN-P0179] I want to lead a cross-area experiment and share a reusable analysis workflow with the team.
+- [Impact; 18 months; SYN-P0179] I want to document the resource-use trade-offs and practical limitations of bio-derived carbon anodes for shared mobility depots.
+
+================================================================================
+SYN-R0251 | Petra Yilmaz | PhD
+Primary area: Materials Circularity
+
+A doctoral researcher working on enzymatic plastic recycling. Their current work examines crystallinity variation in food-service waste, with an emphasis on reproducible comparisons and practical resource use.
+
+CAN OFFER
+- Analytical chemistry (proficiency 3/5)
+- Enzyme engineering (proficiency 5/5)
+- Field experimentation (proficiency 3/5)
+- Statistical experimental design (proficiency 3/5)
+
+PROJECTS
+- SYN-P0584: Enzymatic plastic recycling: immobilized hydrolases for food-service waste (crystallinity variation)
+  Area: Materials Circularity | Stage: Concept
+  Summary: This fictional study will investigate immobilized hydrolases to recover reusable building blocks from polyester waste for food-service waste. It will compare a candidate design with a predefined internal control while varying conditions associated with crystallinity variation. The work will record performance, resource use and failure modes before deciding whether further development is justified.
+  Personal contribution: Run controlled experiments on crystallinity variation and curate the measurement records.
+- SYN-P0696: Enzymatic plastic recycling: membrane-coupled enzyme reactors for textile offcuts (feedstock contamination)
+  Area: Materials Circularity | Stage: Lab study
+  Summary: This fictional study will investigate membrane-coupled enzyme reactors to recover reusable building blocks from polyester waste for textile offcuts. It will compare a candidate design with a predefined internal control while varying conditions associated with feedstock contamination. The work will record performance, resource use and failure modes before deciding whether further development is justified.
+  Personal contribution: Prepare and test candidate designs using membrane-coupled enzyme reactors.
+
+LACKING OR COULD BENEFIT FROM
+- [High; Expertise; SYN-P0584] I could benefit from specialist input in life-cycle assessment before deciding which design to develop for food-service waste.
+- [Medium; Funding; SYN-P0584] I need a modest consumables and validation budget to compare alternatives for crystallinity variation.
+- [Medium; Equipment; SYN-P0584] I need reliable booking time on a temperature-controlled bioreactor and chromatography system so that I can finish repeat measurements.
+
+DESIRED OUTCOMES
+- [Research; 24 months; SYN-P0584] I want to demonstrate an 18% increase in recovered monomer yield from a fixed feedstock mass relative to the study's predefined internal control.
+- [Development; 24 months; SYN-P0584] I want to complete a thesis chapter supported by repeatable measurements and a clearly documented dataset.
+- [Impact; 24 months; SYN-P0584] I want to document the resource-use trade-offs and practical limitations of immobilized hydrolases for food-service waste.
+
+================================================================================
+SYN-R0252 | Chiara Russo | PI
+Primary area: Materials Circularity
+
+A principal investigator working on enzymatic plastic recycling. Their current work examines product inhibition in agricultural plastic collections, with an emphasis on reproducible comparisons and practical resource use. Their projects also connect to water for life.
+
+CAN OFFER
+- Data science (proficiency 5/5)
+- Ecotoxicology (proficiency 4/5)
+- Field experimentation (proficiency 5/5)
+- Reactor engineering (proficiency 5/5)
+
+PROJECTS
+- SYN-P0560: Enzymatic plastic recycling: membrane-coupled enzyme reactors for agricultural plastic collections (product inhibition)
+  Area: Materials Circularity | Stage: Lab study
+  Summary: This fictional study will investigate membrane-coupled enzyme reactors to recover reusable building blocks from polyester waste for agricultural plastic collections. It will compare a candidate design with a predefined internal control while varying conditions associated with product inhibition. The work will record performance, resource use and failure modes before deciding whether further development is justified.
+  Personal contribution: Guide the comparison protocol and assess the route to use in agricultural plastic collections.
+- SYN-P1266: Trace-organic treatment: low-dose electrochemical oxidation for hospital wastewater polishing (variable contaminant mixtures)
+  Area: Water for Life | Stage: Lab study
+  Summary: This fictional study will investigate low-dose electrochemical oxidation to remove trace organic contaminants from reusable water for hospital wastewater polishing. It will compare a candidate design with a predefined internal control while varying conditions associated with variable contaminant mixtures. The work will record performance, resource use and failure modes before deciding whether further development is justified.
+  Personal contribution: Coordinate the study design and interpret results on variable contaminant mixtures.
+
+LACKING OR COULD BENEFIT FROM
+- [High; Expertise; SYN-P0560] I could benefit from specialist input in enzyme engineering before deciding which design to develop for agricultural plastic collections.
+- [Medium; Data; SYN-P0560] I am missing representative operating data from agricultural plastic collections; annotated measurements would help me test generalizability.
+- [High; Training; SYN-P0560] I would benefit from focused training in uncertainty estimation and reproducible reporting for the membrane-coupled enzyme reactors study.
+
+DESIRED OUTCOMES
+- [Research; 18 months; SYN-P0560] I want to demonstrate a 30% increase in recovered monomer yield from a fixed feedstock mass relative to the study's predefined internal control.
+- [Development; 18 months; SYN-P0560] I want to build an application partnership that can test whether the lab findings remain useful under realistic constraints.
+- [Impact; 24 months; SYN-P0560] I want to document the resource-use trade-offs and practical limitations of membrane-coupled enzyme reactors for agricultural plastic collections.
+
+================================================================================
+SYN-R0253 | Rafael Rinaldi | Post-doc
+Primary area: Materials Circularity
+
+A postdoctoral researcher working on biomass upcycling. Their current work examines ash contamination in olive-processing residues, with an emphasis on reproducible comparisons and practical resource use.
+
+CAN OFFER
+- Biomass processing (proficiency 5/5)
+- Field experimentation (proficiency 4/5)
+- Materials synthesis (proficiency 4/5)
+- Process modelling (proficiency 3/5)
+- Scale-up engineering (proficiency 4/5)
+- Techno-economic analysis (proficiency 5/5)
+
+PROJECTS
+- SYN-P0653: Biomass upcycling: low-temperature carbonization for olive-processing residues (ash contamination)
+  Area: Materials Circularity | Stage: Concept
+  Summary: This fictional study will investigate low-temperature carbonization to turn agricultural residues into higher-value functional materials for olive-processing residues. It will compare a candidate design with a predefined internal control while varying conditions associated with ash contamination. The work will record performance, resource use and failure modes before deciding whether further development is justified.
+  Personal contribution: Coordinate repeat experiments and quantify uncertainty in the performance measurements.
+
+LACKING OR COULD BENEFIT FROM
+- [High; Expertise; SYN-P0653] I lack hands-on depth in life-cycle assessment and would benefit from a collaborator to help interpret ash contamination.
+- [Medium; Funding; SYN-P0653] I need a modest consumables and validation budget to compare alternatives for ash contamination.
+- [Medium; Training; SYN-P0653] I would benefit from focused training in uncertainty estimation and reproducible reporting for the low-temperature carbonization study.
+
+DESIRED OUTCOMES
+- [Research; 24 months; SYN-P0653] I want to demonstrate a 20% increase in useful material yield from dry biomass input relative to the study's predefined internal control.
+- [Development; 18 months; SYN-P0653] I want to lead a cross-area experiment and share a reusable analysis workflow with the team.
+
+================================================================================
+SYN-R0501 | Finn Kato | Post-doc
+Primary area: Green Robotics
+
+A postdoctoral researcher working on adaptive crop grippers. Their current work examines variable object shape in mushroom picking, with an emphasis on reproducible comparisons and practical resource use.
+
+CAN OFFER
+- Data science (proficiency 4/5)
+- Field experimentation (proficiency 3/5)
+- Scale-up engineering (proficiency 5/5)
+- Soft robotics (proficiency 4/5)
+- Statistical experimental design (proficiency 4/5)
+- Techno-economic analysis (proficiency 5/5)
+
+PROJECTS
+- SYN-P0844: Adaptive crop grippers: reversible adhesive pads for mushroom picking (variable object shape)
+  Area: Green Robotics | Stage: Lab study
+  Summary: This fictional study will investigate reversible adhesive pads to handle fragile produce without excessive material or energy use for mushroom picking. It will compare a candidate design with a predefined internal control while varying conditions associated with variable object shape. The work will record performance, resource use and failure modes before deciding whether further development is justified.
+  Personal contribution: Coordinate repeat experiments and quantify uncertainty in the performance measurements.
+
+LACKING OR COULD BENEFIT FROM
+- [Medium; Expertise; SYN-P0844] I could benefit from specialist input in control systems before deciding which design to develop for mushroom picking.
+- [Medium; Funding; SYN-P0844] I need a modest consumables and validation budget to compare alternatives for variable object shape.
+- [High; Equipment; SYN-P0844] I need reliable booking time on a force-controlled grasping rig and produce inspection system so that I can finish repeat measurements.
+
+DESIRED OUTCOMES
+- [Research; 18 months; SYN-P0844] I want to demonstrate a 30% reduction in damage rate under a fixed grasping protocol relative to the study's predefined internal control.
+- [Development; 18 months; SYN-P0844] I want to lead a cross-area experiment and share a reusable analysis workflow with the team.
+- [Impact; 18 months; SYN-P0844] I want to document the resource-use trade-offs and practical limitations of reversible adhesive pads for mushroom picking.
+
+================================================================================
+SYN-R0502 | Remy Almeida | PhD
+Primary area: Green Robotics
+
+A doctoral researcher working on adaptive crop grippers. Their current work examines surface moisture in mushroom picking, with an emphasis on reproducible comparisons and practical resource use.
+
+CAN OFFER
+- Computer vision (proficiency 3/5)
+- Control systems (proficiency 3/5)
+- Field experimentation (proficiency 3/5)
+- Life-cycle assessment (proficiency 4/5)
+- Mechanical testing (proficiency 4/5)
+- Scale-up engineering (proficiency 3/5)
+
+PROJECTS
+- SYN-P1124: Adaptive crop grippers: tendon-driven fibre fingers for mushroom picking (surface moisture)
+  Area: Green Robotics | Stage: Prototype
+  Summary: This fictional study will investigate tendon-driven fibre fingers to handle fragile produce without excessive material or energy use for mushroom picking. It will compare a candidate design with a predefined internal control while varying conditions associated with surface moisture. The work will record performance, resource use and failure modes before deciding whether further development is justified.
+  Personal contribution: Build a reproducible analysis of performance and failure modes for mushroom picking.
+
+LACKING OR COULD BENEFIT FROM
+- [Medium; Expertise; SYN-P1124] I lack hands-on depth in statistical experimental design and would benefit from a collaborator to help interpret surface moisture.
+- [Medium; Funding; SYN-P1124] I need a modest consumables and validation budget to compare alternatives for surface moisture.
+- [Low; Partner; SYN-P1124] I would benefit from an application partner working with mushroom picking who can explain deployment constraints.
+
+DESIRED OUTCOMES
+- [Research; 12 months; SYN-P1124] I want to demonstrate a 12% reduction in damage rate under a fixed grasping protocol relative to the study's predefined internal control.
+- [Development; 24 months; SYN-P1124] I want to present the results at a research meeting and prepare a manuscript with a transparent methods section.
+- [Impact; 24 months; SYN-P1124] I want to document the resource-use trade-offs and practical limitations of tendon-driven fibre fingers for mushroom picking.
+
+================================================================================
+SYN-R0511 | Nina Marino | PI
+Primary area: Green Robotics
+
+A principal investigator working on aquatic monitoring robots. Their current work examines biofouling in freshwater reservoirs, with an emphasis on reproducible comparisons and practical resource use.
+
+CAN OFFER
+- Control systems (proficiency 4/5)
+- Field experimentation (proficiency 3/5)
+- Marine robotics (proficiency 4/5)
+- Robot navigation (proficiency 4/5)
+- Scale-up engineering (proficiency 4/5)
+- Techno-economic analysis (proficiency 4/5)
+
+PROJECTS
+- SYN-P0883: Aquatic monitoring robots: modular bio-based hulls for freshwater reservoirs (biofouling)
+  Area: Green Robotics | Stage: Pilot
+  Summary: This fictional study will investigate modular bio-based hulls to collect environmental observations with low-disturbance mobile platforms for freshwater reservoirs. It will compare a candidate design with a predefined internal control while varying conditions associated with biofouling. The work will record performance, resource use and failure modes before deciding whether further development is justified.
+  Personal contribution: Define the scientific questions and connect the work to complementary projects.
+- SYN-P0931: Aquatic monitoring robots: soft-fin propulsion for coastal lagoons (currents)
+  Area: Green Robotics | Stage: Concept
+  Summary: This fictional study will investigate soft-fin propulsion to collect environmental observations with low-disturbance mobile platforms for coastal lagoons. It will compare a candidate design with a predefined internal control while varying conditions associated with currents. The work will record performance, resource use and failure modes before deciding whether further development is justified.
+  Personal contribution: Define the scientific questions and connect the work to complementary projects.
+
+LACKING OR COULD BENEFIT FROM
+- [High; Expertise; SYN-P0883] I lack hands-on depth in life-cycle assessment and would benefit from a collaborator to help interpret biofouling.
+- [Medium; Expertise; SYN-P0931] I need complementary expertise in statistical experimental design to make the comparison protocol more convincing for coastal lagoons.
+- [Medium; Data; SYN-P0883] I am missing representative operating data from freshwater reservoirs; annotated measurements would help me test generalizability.
+- [Medium; Partner; SYN-P0883] I would benefit from an application partner working with freshwater reservoirs who can explain deployment constraints.
+
+DESIRED OUTCOMES
+- [Research; 9 months; SYN-P0883] I want to demonstrate a 30% reduction in energy use per kilometre of monitoring route relative to the study's predefined internal control.
+- [Development; 18 months; SYN-P0883] I want to assemble a complementary team and write a follow-on research proposal grounded in the validation results.
+
+================================================================================
+SYN-R0751 | Jonas Sato | Post-doc
+Primary area: Water for Life
+
+A postdoctoral researcher working on trace-organic treatment. Their current work examines transformation products in municipal reuse water, with an emphasis on reproducible comparisons and practical resource use.
+
+CAN OFFER
+- Data science (proficiency 5/5)
+- Field experimentation (proficiency 4/5)
+- Statistical experimental design (proficiency 5/5)
+- Water chemistry (proficiency 4/5)
+
+PROJECTS
+- SYN-P1258: Trace-organic treatment: visible-light photocatalysis for municipal reuse water (transformation products)
+  Area: Water for Life | Stage: Prototype
+  Summary: This fictional study will investigate visible-light photocatalysis to remove trace organic contaminants from reusable water for municipal reuse water. It will compare a candidate design with a predefined internal control while varying conditions associated with transformation products. The work will record performance, resource use and failure modes before deciding whether further development is justified.
+  Personal contribution: Develop the visible-light photocatalysis workflow and troubleshoot transformation products.
+
+LACKING OR COULD BENEFIT FROM
+- [High; Expertise; SYN-P1258] I need complementary expertise in life-cycle assessment to make the comparison protocol more convincing for municipal reuse water.
+- [Medium; Partner; SYN-P1258] I would benefit from an application partner working with municipal reuse water who can explain deployment constraints.
+- [Low; Equipment; SYN-P1258] I need reliable booking time on a trace-organic analysis system and controlled treatment reactor so that I can finish repeat measurements.
+
+DESIRED OUTCOMES
+- [Research; 12 months; SYN-P1258] I want to demonstrate a 10% reduction in target-organic concentration under a fixed treatment protocol relative to the study's predefined internal control.
+- [Development; 18 months; SYN-P1258] I want to publish a reproducible methods study and develop an independent research direction from the results.
+- [Impact; 24 months; SYN-P1258] I want to document the resource-use trade-offs and practical limitations of visible-light photocatalysis for municipal reuse water.
+
+================================================================================
+SYN-R0754 | Selin Pellegrini | PhD
+Primary area: Water for Life
+
+A doctoral researcher working on low-energy desalination. Their current work examines organic contamination in emergency freshwater units, with an emphasis on reproducible comparisons and practical resource use.
+
+CAN OFFER
+- Statistical experimental design (proficiency 3/5)
+- Techno-economic analysis (proficiency 4/5)
+- Thermal modelling (proficiency 3/5)
+- Water chemistry (proficiency 3/5)
+
+PROJECTS
+- SYN-P1263: Low-energy desalination: low-pressure hybrid filtration for emergency freshwater units (organic contamination)
+  Area: Water for Life | Stage: Lab study
+  Summary: This fictional study will investigate low-pressure hybrid filtration to produce usable freshwater with lower desalination energy demand for emergency freshwater units. It will compare a candidate design with a predefined internal control while varying conditions associated with organic contamination. The work will record performance, resource use and failure modes before deciding whether further development is justified.
+  Personal contribution: Run controlled experiments on organic contamination and curate the measurement records.
+- SYN-P1455: Low-energy desalination: selective electrodialysis for small coastal settlements (salt scaling)
+  Area: Water for Life | Stage: Lab study
+  Summary: This fictional study will investigate selective electrodialysis to produce usable freshwater with lower desalination energy demand for small coastal settlements. It will compare a candidate design with a predefined internal control while varying conditions associated with salt scaling. The work will record performance, resource use and failure modes before deciding whether further development is justified.
+  Personal contribution: Build a reproducible analysis of performance and failure modes for small coastal settlements.
+
+LACKING OR COULD BENEFIT FROM
+- [Medium; Expertise; SYN-P1263] I lack hands-on depth in scale-up engineering and would benefit from a collaborator to help interpret organic contamination.
+- [Medium; Partner; SYN-P1455] I would benefit from an application partner working with small coastal settlements who can explain deployment constraints.
+
+DESIRED OUTCOMES
+- [Research; 18 months; SYN-P1263] I want to demonstrate a 12% reduction in energy use per cubic metre of product water relative to the study's predefined internal control.
+- [Development; 18 months; SYN-P1263] I want to present the results at a research meeting and prepare a manuscript with a transparent methods section.
+
+================================================================================
+SYN-R0779 | Elif Carvalho | PI
+Primary area: Water for Life
+
+A principal investigator working on nanoplastic separation and low-fouling water membranes. Their current work examines particle aggregation in industrial wash streams, with an emphasis on reproducible comparisons and practical resource use. Their projects also connect to sustainable energy.
+
+CAN OFFER
+- Colloid science (proficiency 3/5)
+- Gas analysis (proficiency 4/5)
+- Statistical experimental design (proficiency 5/5)
+- Water chemistry (proficiency 4/5)
+
+PROJECTS
+- SYN-P0164: Carbon dioxide capture: moisture-tolerant membranes for dilute industrial exhausts (impurity competition)
+  Area: Sustainable Energy | Stage: Lab study
+  Summary: This fictional study will investigate moisture-tolerant membranes to capture carbon dioxide with regenerable sorbents for dilute industrial exhausts. It will compare a candidate design with a predefined internal control while varying conditions associated with impurity competition. The work will record performance, resource use and failure modes before deciding whether further development is justified.
+  Personal contribution: Define the scientific questions and connect the work to complementary projects.
+- SYN-P1257: Nanoplastic separation: charge-tuned membranes for industrial wash streams (particle aggregation)
+  Area: Water for Life | Stage: Lab study
+  Summary: This fictional study will investigate charge-tuned membranes to separate nanoscale polymer particles while tracking recovery losses for industrial wash streams. It will compare a candidate design with a predefined internal control while varying conditions associated with particle aggregation. The work will record performance, resource use and failure modes before deciding whether further development is justified.
+  Personal contribution: Guide the comparison protocol and assess the route to use in industrial wash streams.
+- SYN-P1297: Nanoplastic separation: charge-tuned membranes for industrial wash streams (dissolved-organic interference)
+  Area: Water for Life | Stage: Concept
+  Summary: This fictional study will investigate charge-tuned membranes to separate nanoscale polymer particles while tracking recovery losses for industrial wash streams. It will compare a candidate design with a predefined internal control while varying conditions associated with dissolved-organic interference. The work will record performance, resource use and failure modes before deciding whether further development is justified.
+  Personal contribution: Guide the comparison protocol and assess the route to use in industrial wash streams.
+- SYN-P1321: Nanoplastic separation: bioflocculant-assisted separation for industrial wash streams (dissolved-organic interference)
+  Area: Water for Life | Stage: Concept
+  Summary: This fictional study will investigate bioflocculant-assisted separation to separate nanoscale polymer particles while tracking recovery losses for industrial wash streams. It will compare a candidate design with a predefined internal control while varying conditions associated with dissolved-organic interference. The work will record performance, resource use and failure modes before deciding whether further development is justified.
+  Personal contribution: Guide the comparison protocol and assess the route to use in industrial wash streams.
+- SYN-P1382: Low-fouling water membranes: patterned filtration surfaces for food-processing wash water (biofilm formation)
+  Area: Water for Life | Stage: Prototype
+  Summary: This fictional study will investigate patterned filtration surfaces to maintain water filtration performance with less cleaning for food-processing wash water. It will compare a candidate design with a predefined internal control while varying conditions associated with biofilm formation. The work will record performance, resource use and failure modes before deciding whether further development is justified.
+  Personal contribution: Define the scientific questions and connect the work to complementary projects.
+
+LACKING OR COULD BENEFIT FROM
+- [Medium; Expertise; SYN-P1257] I need complementary expertise in field experimentation to make the comparison protocol more convincing for industrial wash streams.
+- [Low; Funding; SYN-P1321] I need a modest consumables and validation budget to compare alternatives for dissolved-organic interference.
+- [Medium; Training; SYN-P1321] I would benefit from focused training in uncertainty estimation and reproducible reporting for the bioflocculant-assisted separation study.
+
+DESIRED OUTCOMES
+- [Research; 18 months; SYN-P0164] I want to demonstrate a 15% reduction in regeneration energy per kilogram of captured carbon dioxide relative to the study's predefined internal control.
+- [Development; 18 months; SYN-P0164] I want to assemble a complementary team and write a follow-on research proposal grounded in the validation results.
