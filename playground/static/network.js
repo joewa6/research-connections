@@ -7,7 +7,7 @@
   const openButton = document.querySelector('#network-open-person');
   const selectionText = document.querySelector('#network-selection');
   const loadingText = document.querySelector('#network-loading');
-  const colors = {1: '#ffd166', 2: '#ff8fba', 3: '#b6a0ff', 4: '#5bd9eb'};
+  const colors = {1: '#95630d', 2: '#ae4666', 3: '#7256a6', 4: '#167886'};
   const defaultCaption = 'Select a researcher to trace their connections.';
   let graph, nodesById, neighbors, centers;
   let width = 0, height = 0, worldWidth = 1000, worldHeight = 560, fit = 1;
@@ -73,7 +73,7 @@
       const focused = focus && (edge.source === focus.id || edge.target === focus.id);
       const inArea = !activeArea || source.area_id === activeArea || target.area_id === activeArea;
       context.globalAlpha = focus ? (focused ? 0.85 : 0.035) : (inArea ? (crossAreaOnly ? 0.24 : 0.17) : 0.025);
-      context.strokeStyle = focused ? colors[focus.area_id] : '#7399ca';
+      context.strokeStyle = focused ? colors[focus.area_id] : '#8195a6';
       context.lineWidth = focused ? 1.25 : 0.65;
       const a = points.get(edge.source), b = points.get(edge.target);
       context.beginPath();
@@ -105,12 +105,12 @@
       const labelWidth = context.measureText(focus.name).width + 18;
       const x = Math.max(5, Math.min(width - labelWidth - 5, point.x - labelWidth / 2));
       const y = Math.max(5, Math.min(height - 33, point.y - 37));
-      context.fillStyle = '#18283e';
-      context.strokeStyle = '#526b8c';
+      context.fillStyle = '#ffffff';
+      context.strokeStyle = '#b5c5d2';
       context.lineWidth = 1;
       context.fillRect(x, y, labelWidth, 27);
       context.strokeRect(x, y, labelWidth, 27);
-      context.fillStyle = '#f1f6ff';
+      context.fillStyle = '#263746';
       context.textAlign = 'left';
       context.fillText(focus.name, x + 9, y + 18);
     } else if (zoom <= 1.3) {

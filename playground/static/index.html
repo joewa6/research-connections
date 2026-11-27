@@ -6,11 +6,11 @@
   <title>Research Connections</title>
   <meta name="description" content="Search a fictional research community by topic, expertise, support needs and desired outcomes.">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <meta name="theme-color" content="#0b101a">
-  <link rel="stylesheet" href="./styles.css?v=workspace-2">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="./styles.css?v=light-3">
   <!-- hosted-api -->
-  <script src="./app.js?v=workspace-2" defer></script>
-  <script src="./network.js?v=workspace-2" defer></script>
+  <script src="./app.js?v=light-3" defer></script>
+  <script src="./network.js?v=light-3" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#search-input">Skip to search</a>
@@ -20,17 +20,17 @@
     <div class="header-links"><span class="demo-label">Fictional dataset</span><button id="about-button" class="quiet-button">About the data</button></div>
   </header>
   <main id="main">
-    <div class="workspace-heading"><div><p class="eyebrow">Technologies for sustainability</p><h1>Research explorer<span class="title-dot">.</span></h1></div><p id="dataset-size" class="workspace-count">Loading the research community…</p></div>
+    <div class="workspace-heading"><div><h1>Research overview</h1></div><p id="dataset-size" class="workspace-count">Loading the research community…</p></div>
     <div class="workspace">
     <section class="network-section" aria-labelledby="network-title">
-      <div class="network-heading"><div><h2 id="network-title">Collaboration network</h2><p id="network-count">Shared projects connect researchers.</p></div><span class="panel-label">Full dataset</span></div>
+      <div class="network-heading"><div><h2 id="network-title">Collaboration network</h2><p id="network-count">Shared projects connect researchers.</p></div></div>
       <div class="network-stage"><canvas id="network-canvas" role="img" aria-label="Network of 1,000 fictional researchers. Lines connect people who share a project. Use the person selector below as a text alternative."></canvas><p id="network-loading" class="network-loading" role="status">Drawing the network…</p><div class="network-tools" aria-label="Network zoom"><button id="network-zoom-out" aria-label="Zoom out">−</button><button id="network-reset" aria-label="Reset network view">Reset</button><button id="network-zoom-in" aria-label="Zoom in">+</button></div><label class="network-toggle"><input id="network-cross-area" type="checkbox">Cross-area links only</label><p class="network-instruction">Drag to pan <span>·</span> Select a person to explore</p></div>
       <div class="network-legend" id="network-legend" aria-label="Highlight a research area"></div>
       <div class="network-bottom"><p id="network-selection" aria-live="polite">Select a researcher to trace their connections.</p><div class="network-person-control"><label class="sr-only" for="network-person">Select a person in the network</label><select id="network-person"><option value="">Find a person in the network…</option></select><button id="network-open-person" class="outline-button" disabled>Open profile ↗</button></div></div>
       <p class="network-note">Dots represent people. Size reflects collaborator count. Positions group research areas, not similarity. Lines show existing shared projects.</p>
     </section>
     <section class="directory-section" aria-labelledby="directory-title">
-    <div class="intro"><div><span class="eyebrow">Directory</span><h2 id="directory-title">Explore people &amp; projects</h2></div><span class="directory-mark" aria-hidden="true">↗</span></div>
+    <div class="intro"><div><h2 id="directory-title">People and projects</h2></div></div>
     <form id="search-form" role="search">
       <label class="sr-only" for="search-input">Search people and projects</label>
       <div class="search-box"><svg width="21" height="21" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.7"/></svg><input id="search-input" type="search" maxlength="200" placeholder="Search names, topics, skills or needs" autocomplete="off"><button type="submit" id="search-submit" class="solid-button">Search</button></div>
